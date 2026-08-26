@@ -27,6 +27,6 @@ console.log(serie);
 console.log(personaje);
 console.log(razon);
 
-alert("En la seire " + serie + " sale el personaje " + personaje + " y es mi favorito " + razon)
+alert(En la seire " + serie + " sale el personaje " + personaje + " y es mi favorito " + razon)
 
 
