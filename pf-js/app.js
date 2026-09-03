@@ -44,6 +44,10 @@ console.log(participante.sayHi());
 //*como agregar un nuevo par llave valor
 
 console.log(participante);
+
+
+//?agregando un array como valor
+
 participante.favoriteAnimals = ["Tortuga", "Gato", "Cuervo"];
 console.log(participante);
 
@@ -52,3 +56,46 @@ console.log(participante);
 
 participante.adress = ["Mexico", "CDMX", "Coyoacan"];
 console.log(participante);
+
+
+//?agregando un objeto como valor a llave adress
+
+participante.adress = {
+    zipCode: "12345",
+    country: "Mexico",
+};
+
+//como accedemos a la info de objetos o array anidados (objetos o arrays dentro de otro objeto, u otro array)
+
+console.log(
+    `El primer animal favorito de ${participante.name} es: ${participante.favoriteAnimals[0]}`
+);
+console.log(participante.favoriteAnimals);
+
+console.log(
+    `El codigo postal de ${participante.name} es: ${participante.adress.zipCode}`
+);
+console.log(
+    `El pais de ${participante.name} es: ${participante.adress.country}`
+);
+
+console.log(`El segundo animal favorito de ${participante.name} es: ${participante.favoriteAnimals[1]}`);
+
+//*como modificar el valor de una llave
+participante.age = 22;
+console.log(participante.age);
+
+//*como eliminar una llave (casi no usada)
+delete participante.ch;
+console.log(participante);
+
+//como iterar sobre el objeto
+
+for(const llave in participante){
+    console.log(`El valor de la llave ${llave} es ${participante[llave]}`);
+}
+
+//Obteniendolo desde adentro
+for(const llave in participante.adress){
+    console.log(`El valor de la llave ${llave} es ${participante.adress[llave]}`);
+}
